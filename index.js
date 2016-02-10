@@ -1,1 +1,1 @@
-document.write('This is my first PROJECT!!!');
+console.log('This is my first PROJECT!!!');
