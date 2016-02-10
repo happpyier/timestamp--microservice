@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send(cool());
+  response.send('This is a test!');
 });
 
 app.listen(app.get('port'), function() {
