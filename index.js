@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send('The request is...'+request+'\n'+'The response is...'+response);
+  response.send('The request is...'+JSON.stringify(request)+'\n'+'The response is...'+JSON.stringify(response));
   response.end('Its Over!');
 });
 
