@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send('The request is...'+JSON.parse(request)+'\n'+'The response is...'+JSON.parse(response));
+  response.send("Need to work on the Stringify part"+'\n'+'The request is...'+request+'\n'+'The response is...'+response);
   response.end('Its Over!');
 });
 
