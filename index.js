@@ -11,8 +11,9 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   var oMyOBject = {any:'data'};
+  var oMyOBject2 = JSON.parse(oMyOBject);
   response.type('application/json');
-  response.send("Need to work on the Stringify part"+'\n'+'The request is...'+"Not Gonna Happen"+'\n'+'The response is...'+oMyOBject);
+  response.send("Need to work on the Stringify part"+'\n'+'The request is...'+"Not Gonna Happen"+'\n'+'The response is...'+oMyOBject2);
   response.end('Its Over!');
 });
 
