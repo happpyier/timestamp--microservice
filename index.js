@@ -10,7 +10,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send("Need to work on the Stringify part"+'\n'+'The request is...'+JSON.stringify(request)+'\n'+'The response is...'+JSON.stringify(response));
+  var oMyOBject = {any:'data'};
+  response.type('application/json');
+  response.send("Need to work on the Stringify part"+'\n'+'The request is...'+"Not Gonna Happen"+'\n'+'The response is...'+oMyOBject);
   response.end('Its Over!');
 });
 
