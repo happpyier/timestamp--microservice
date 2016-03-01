@@ -18,10 +18,10 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/:name', function(request, response) {
+app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.incoming._parsedOriginalUrl);
   var reponseUnparsed = response.connection.parser.incoming._parsedOriginalUrl;
-  var hiiiKitty = request.name;
+  var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
   {
 	response.send("Kitty is here <br/> Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
