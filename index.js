@@ -16,7 +16,7 @@ _readableState,readable,domain,_events,_maxListeners,socket,connection,httpVersi
 var express = require('express');
 var app = express();
 
-//app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.incoming._parsedOriginalUrl);
@@ -26,6 +26,6 @@ app.get('/', function(request, response) {
   response.end('Its Over!');
 });
 
-//app.listen(app.get('port'), function() {
-//  console.log('Node app is running on port', app.get('port'));
-//});
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
