@@ -13,7 +13,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  var reponseParsed = response._events; 
+  var reponseParsed = JSON.stringify(response._events); 
   response.send("Need to work on the Stringify part"+'\n'+'The request is...'+"Not Gonna Happen"+'\n'+'The response is...\n'+reponseParsed);
   response.end('Its Over!');
 });
