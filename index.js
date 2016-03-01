@@ -22,7 +22,7 @@ app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.incoming._parsedOriginalUrl);
   var reponseUnparsed = response.connection.parser.incoming._parsedOriginalUrl;
   res.render('index', {});
-  response.send("Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
+  //response.send("Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
   response.end('Its Over!');
 });
 
