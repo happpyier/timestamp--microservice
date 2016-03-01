@@ -9,7 +9,7 @@ domain,_events,_maxListeners,_connections,_handle,_usingSlaves,_slaves,allowHalf
 */
 /* ---response.connection.parser
 0,1,2,3,_headers,_url,socket,incoming,maxHeaderPairs,onIncoming
-*/ 
+*/  
 var express = require('express');
 var app = express();
 
@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.onIncoming);
-  var reponseUnparsed = 'Object.keys(response.connection.parser.incoming)';
+  var reponseUnparsed = Object.keys(response.connection.parser.incoming);
   response.send("Need to work on the Stringify part"+'\n'+'The reponse unParsed is...'+reponseUnparsed+'\n'+'The response is...\n'+reponseParsed);
   response.end('Its Over!');
 });
