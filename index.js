@@ -16,16 +16,16 @@ _readableState,readable,domain,_events,_maxListeners,socket,connection,httpVersi
 var express = require('express');
 var app = express();
 
-//app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.incoming._parsedOriginalUrl);
   var reponseUnparsed = response.connection.parser.incoming._parsedOriginalUrl;
-  res.render('index.html');
+  response.render('index.html');
   //response.send("Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
   response.end('Its Over!');
 });
 
-//app.listen(app.get('port'), function() {
-//  console.log('Node app is running on port', app.get('port'));
-//});
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
