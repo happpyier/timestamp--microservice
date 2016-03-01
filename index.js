@@ -20,7 +20,7 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(response.connection.parser.incoming._parsedOriginalUrl);
-  var reponseUnparsed = JSON.stringify(request);
+  var reponseUnparsed = Object.keys(request); 
   var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
   {
