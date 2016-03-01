@@ -25,8 +25,8 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  var reponseParsed = JSON.stringify(response.connection.parser.incoming.url);
-  var reponseUnparsed = response.connection.parser.incoming.url;
+  var reponseParsed = JSON.stringify(response.connection.parser.incoming.baseUrl);
+  var reponseUnparsed = response.connection.parser.incoming.baseUrl;
   response.send("Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
   response.end('Its Over!');
 });
