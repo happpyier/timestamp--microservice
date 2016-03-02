@@ -8,23 +8,22 @@ app.get('/:tagId', function(request, response) {
   //put a regular expression for data here! 1451624400
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,}$/.test(reponseParsed);
+  /*
   if (searchString2  == true && reponseParsed > 86400000)
   {
 	var dateInNaturaltime = Date.parse("January 1, 2016")/ 1000;
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}");
   }
-  /*
   else if (searchedString == true)
   {
 	var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
 	response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
   }
-  */
   else
   {
 	response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
   }
-  //response.end('Its Over!'); 
+  */
 });
 
 app.get('/', function(request, response) {
