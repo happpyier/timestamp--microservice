@@ -23,7 +23,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function(request, response) {
   var url_parts = url.parse(request.url, true);
   var query = url_parts.query;  
-  var reponseParsed = query;
+  var reponseParsed = JSON.stringify(query);
   var reponseUnparsed = Object.keys(request); 
   var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
