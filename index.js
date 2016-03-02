@@ -11,8 +11,7 @@ app.get('/:tagId', function(request, response) {
   if (searchedString2  == true && ReponseParsed > 100000000)
   {
 	var d = new Date(ReponseParsed);
-	dateInNaturaltime = d.toDateString();
-	var dateInNaturaltime = Date.parse("January 1, 2016")/ 1000;
+	var dateInNaturaltime = d.toDateString();
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
   }
   else
