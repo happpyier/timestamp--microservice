@@ -4,7 +4,7 @@ var path = require("path");
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/:tagId', function(request, response) {
-  var reponseParsed = JSON.stringify(request.params.tagId);
+  var reponseParsed = request.params.tagId;
   //put a regular expression for data here!
   var searchedString = /^\w*\s\d*\S\s\d*$/.test(reponseParsed);
   response.send("You said<br/>"+searchedString);
