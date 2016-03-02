@@ -6,9 +6,8 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/:tagId', function(request, response) {
   
   var preReponseParsed = request.params.tagId;
-  var ReponseParsed = preReponseParsed.replace(",", "");
+  var reponseParsed = preReponseParsed.replace(",", "");
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
-  /*
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
   
   if (searchedString2  == true)
@@ -30,8 +29,6 @@ app.get('/:tagId', function(request, response) {
 		response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
 	  }
   }
-  */
-  response.send("it got here");
 });
 
 app.get('/', function(request, response) {
