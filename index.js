@@ -12,19 +12,15 @@ domain,_events,_maxListeners,_connections,_handle,_usingSlaves,_slaves,allowHalf
 */
 /* ---response.connection.parser.incoming
 _readableState,readable,domain,_events,_maxListeners,socket,connection,httpVersionMajor,httpVersionMinor,httpVersion,complete,headers,rawHeaders,trailers,rawTrailers,_pendings,_pendingIndex,upgrade,url,method,statusCode,statusMessage,client,_consuming,_dumped,next,baseUrl,originalUrl,_parsedUrl,params,query,res,_parsedOriginalUrl,route 
-*/
-var url = require('url');
-
+*/  
 var express = require('express');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  var url_parts = url.parse(request.url, true);
-  var query = url_parts.query;  
-  var reponseParsed = JSON.stringify(query);
-  var reponseUnparsed = Object.keys(request); 
+  var reponseParsed = JSON.stringify(request.baseUrl);
+  var reponseUnparsed = 'id: ' + request.query.id; 
   var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
   {
