@@ -8,7 +8,7 @@ app.get('/:tagId', function(request, response) {
   ReponseParsed = preReponseParsed.replace(",", "");
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
-  if (searchedString2  == true && ReponseParsed > 100000000)
+  if (searchedString2  == true)
   {
 	var d = new Date(ReponseParsed);
 	var dateInNaturaltime = d.toDateString();
