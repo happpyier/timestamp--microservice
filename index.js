@@ -29,7 +29,7 @@ app.get('/:tagId', function(request, response) {
 	  }
   }
   */
-  reponse.send("it got here");
+  response.send("it got here");
 });
 
 app.get('/', function(request, response) {
