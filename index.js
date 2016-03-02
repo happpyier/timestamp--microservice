@@ -8,24 +8,19 @@ app.get('/:tagId', function(request, response) {
   ReponseParsed = preReponseParsed.replace(",", "");
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
-  /*
   if (searchedString2  == true)
   {
 	var d = new Date(ReponseParsed);
 	var dateInNaturaltime = d.toDateString();
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
   }
-  */
-  var x = 1
-  if ( x > 2)
-  {
-  }
   else
   {
 	  if (searchedString == true)
 	  {
-		var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
-		response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
+		//var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
+		//response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
+		reponse.send("it got here");
 	  }
 	  else
 	  {
