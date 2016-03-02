@@ -12,7 +12,7 @@ app.get('/:tagId', function(request, response) {
   
   if (searchedString2  == true)
   {
-	var d = new Date(preReponseParsed);
+	var d = new Date(1450051200000);
 	var dateInNaturaltime = d.toDateString();
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
   }
