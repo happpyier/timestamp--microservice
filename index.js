@@ -4,7 +4,7 @@ _readableState,readable,domain,_events,_maxListeners,socket,connection,httpVersi
  
 var express = require('express');
 var app = express();
-
+var path = require("path");
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/:tagId', function(request, response) {
@@ -14,7 +14,7 @@ app.get('/:tagId', function(request, response) {
   response.send("You said<br/>"+reponseParsed);
   response.end('Its Over!');
   */
-  response.sendFile('index.html');
+  response.sendFile(path.join(__dirname+'/index.html'));
   
 });
 
