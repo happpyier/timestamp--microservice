@@ -22,7 +22,7 @@ app.get('/:tagId', function(request, response) {
 	  if (searchedString == true)
 	  {
 		var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
-		if (dateInUnixtime == "NaN")
+		if (dateInUnixtime == NaN)
 		{
 			response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
 		}
