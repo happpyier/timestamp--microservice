@@ -8,6 +8,7 @@ app.get('/:tagId', function(request, response) {
   ReponseParsed = preReponseParsed.replace(",", "");
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
+  /*
   if (searchedString2  == true)
   {
 	var d = new Date(ReponseParsed);
@@ -18,15 +19,17 @@ app.get('/:tagId', function(request, response) {
   {
 	  if (searchedString == true)
 	  {
-		//var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
-		//response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
-		reponse.send("it got here");
+		var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
+		response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
+		
 	  }
 	  else
 	  {
 		response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
 	  }
   }
+  */
+  reponse.send("it got here");
 });
 
 app.get('/', function(request, response) {
