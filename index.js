@@ -8,9 +8,14 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/:tagId', function(request, response) {
+
+  /*
   var reponseParsed = JSON.stringify(request.params.tagId);
   response.send("You said<br/>"+reponseParsed);
   response.end('Its Over!');
+  */
+  response.sendFile('index.html');
+  
 });
 
 app.listen(app.get('port'), function() {
