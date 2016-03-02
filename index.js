@@ -1,5 +1,5 @@
 /* ---request
-domain,_events,_maxListeners,output,outputEncodings,outputCallbacks,writable,_last,chunkedEncoding,shouldKeepAlive,useChunkedEncodingByDefault,sendDate,_removedHeader,_hasBody,_trailer,finished,_hangupClose,_headerSent,socket,connection,_header,_headers,_headerNames,req,locals
+_readableState,readable,domain,_events,_maxListeners,socket,connection,httpVersionMajor,httpVersionMinor,httpVersion,complete,headers,rawHeaders,trailers,rawTrailers,_pendings,_pendingIndex,upgrade,url,method,statusCode,statusMessage,client,_consuming,_dumped,next,baseUrl,originalUrl,_parsedUrl,params,query,res,route
 */
  
 var express = require('express');
@@ -8,7 +8,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  var reponseParsed = JSON.stringify(request.baseUrl);
+  var reponseParsed = JSON.stringify(request.complete);
   var reponseUnparsed = Object.keys(request); 
   var reponseUnparsed111 = 'id: ' + request.query.id; 
   var hiiiKitty = request;
