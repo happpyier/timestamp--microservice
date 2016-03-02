@@ -10,7 +10,7 @@ app.get('/:tagId', function(request, response) {
   var searchedString2 = /^\d{8,}$/.test(reponseParsed);
   
   
-  if (searchString2  == true & reponseParsed > 86400000)
+  if (searchString2 == true)
   {
 	var dateInNaturaltime = 'Date.parse("January 1, 2016")/ 1000';
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}");
