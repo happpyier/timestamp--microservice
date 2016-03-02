@@ -6,7 +6,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/:tagId', function(request, response) {
   var reponseParsed = request.params.tagId;
   //put a regular expression for data here!
-  var searchedString = /^\w*\s\d*\S\s\d*$/.test(reponseParsed);
+  var searchedString = /^\w*\s[0-9]*\S\s\d*$/.test(reponseParsed);
   if (searchedString == true)
   {
 	response.send("{\"unix\":dateInUnixtime,\"natural\":\""+reponseParsed+"\"}");
