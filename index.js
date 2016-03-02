@@ -13,11 +13,13 @@ app.get('/:tagId', function(request, response) {
 	var dateInNaturaltime = Date.parse("January 1, 2016")/ 1000;
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}");
   }
+  /*
   else if (searchedString == true)
   {
 	var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
 	response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
   }
+  */
   else
   {
 	response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
