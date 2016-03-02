@@ -7,8 +7,8 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function(request, response) {
-  var reponseParsed = JSON.stringify(request.params);
+app.get('/:tagId', function(request, response) {
+  var reponseParsed = JSON.stringify(request.params.tagId);
   var reponseUnparsed = Object.keys(request.res); 
   var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
