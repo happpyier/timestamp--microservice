@@ -7,7 +7,7 @@ app.get('/:tagId', function(request, response) {
   
   var preReponseParsed = request.params.tagId;
   var reponseParsed = preReponseParsed.replace(",", "");
-  var searchedString = /^\D*\s[1-31]\S\s\d*$/.test(reponseParsed);
+  var searchedString = /^\D*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
   
   if (searchedString2  == true)
@@ -22,12 +22,18 @@ app.get('/:tagId', function(request, response) {
 	  if (searchedString == true)
 	  {
 		var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
-		response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
-		
+		if (dateInUnixtime == "NaN")
+		{
+			response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
+		}
+		else
+		{
+			response.send("{\"unix\":"+dateInUnixtime+",\"natural\":\""+reponseParsed+"\"}");
+		}
 	  }
 	  else
 	  {
-		response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
+		response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
 	  }
   }
 });
