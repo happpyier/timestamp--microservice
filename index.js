@@ -14,7 +14,6 @@ app.get('/:tagId', function(request, response) {
 	dateInNaturaltime = d.toDateString();
 	var dateInNaturaltime = Date.parse("January 1, 2016")/ 1000;
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
-	response.send("it got here");
   }
   else
   {
