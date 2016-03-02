@@ -12,7 +12,7 @@ app.get('/:tagId', function(request, response) {
   {
 	var d = new Date(ReponseParsed);
 	var dateInNaturaltime = d.toDateString();
-	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
+	response.send('"{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"'); 
   }
   else
   {
