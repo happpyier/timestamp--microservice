@@ -9,7 +9,7 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
   var reponseParsed = JSON.stringify(request.query);
-  var reponseUnparsed = Object.keys(request); 
+  var reponseUnparsed = Object.keys(request.query); 
   var reponseUnparsed111 = 'id: ' + request.query.id; 
   var hiiiKitty = request;
   if (hiiiKitty == "helloKitty")
