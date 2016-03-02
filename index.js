@@ -24,7 +24,7 @@ app.get('/:tagId', function(request, response) {
 		var dateInUnixtime = Date.parse(reponseParsed)/ 1000;
 		if (isFinite(dateInUnixtime) == false)
 		{
-			response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
+			response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 15 2015)")
 		}
 		else
 		{
@@ -33,7 +33,7 @@ app.get('/:tagId', function(request, response) {
 	  }
 	  else
 	  {
-		response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
+		response.send("Please enter a valid date in the form of Unix Time(1451606400) or Natural Time(January 15 2015)")
 	  }
   }
 });
