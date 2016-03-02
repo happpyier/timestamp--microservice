@@ -13,7 +13,8 @@ app.get('/:tagId', function(request, response) {
   if (searchedString2  == true)
   {
 	var d = new Date(preReponseParsed*1000);
-	var dateInNaturaltime = d.toDateString();
+	var preDateInNaturaltime = d.toDateString();
+	dateInNaturaltime = preDateInNaturaltime.substr(preDateInNaturaltime.indexOf(" ") + 1);
 	response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); 
   }
   else
