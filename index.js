@@ -8,6 +8,7 @@ app.get('/:tagId', function(request, response) {
   //put a regular expression for data here! 1451624400
   var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,}$/.test(reponseParsed);
+  response.send("it got here");
   /*
   if (searchString2  == true && reponseParsed > 86400000)
   {
