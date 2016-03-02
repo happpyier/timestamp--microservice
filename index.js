@@ -9,18 +9,8 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/:tagId', function(request, response) {
   var reponseParsed = JSON.stringify(request.params.tagId);
-  var reponseUnparsed = Object.keys(request.res); 
-  var hiiiKitty = request;
-  if (hiiiKitty == "helloKitty")
-  {
-	response.send("Kitty is here <br/> Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
-	response.end('Its Over!');
-  }
-  else
-  {
-	response.send("Kitty is nowhere to be found <br/> Need to work on the Stringify part"+'<br/>'+'The reponse unParsed is...<br/>'+reponseUnparsed+'\<br/>'+'The response is...<br/>'+reponseParsed);
-	response.end('Its Over!');
-  }
+  response.send("You said<br/>"+reponseParsed);
+  response.end('Its Over!');
 });
 
 app.listen(app.get('port'), function() {
