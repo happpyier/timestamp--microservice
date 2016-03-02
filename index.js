@@ -11,8 +11,7 @@ app.get('/:tagId', function(request, response) {
   if (searchString2  == true && reponseParsed > 86400000)
   {
 	//var dateInNaturaltime = Date.parse("January 1, 2016")/ 1000;
-	/*response.send("{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"); */
-	response.send("it got here");
+	response.send('"{\"unix\":"+reponseParsed+",\"natural\":\""+dateInNaturaltime+"\"}"'); 
   }
   else if (searchedString == true)
   {
