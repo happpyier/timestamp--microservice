@@ -7,7 +7,7 @@ app.get('/:tagId', function(request, response) {
   
   var preReponseParsed = request.params.tagId;
   var reponseParsed = preReponseParsed.replace(",", "");
-  var searchedString = /^\w*\s[1-9]+\S\s\d*$/.test(reponseParsed);
+  var searchedString = /^\D*\s[1-9]+\S\s\d*$/.test(reponseParsed);
   var searchedString2 = /^\d{8,10}$/.test(reponseParsed);
   
   if (searchedString2  == true)
