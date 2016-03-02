@@ -7,7 +7,7 @@ app.get('/:tagId', function(request, response) {
   var reponseParsed = request.params.tagId;
   //put a regular expression for data here!
   var searchedString = /^\w*\s\d*\S\s\d*$/.test(reponseParsed);
-  response.send("{\"unix\":dateInUnixtime,\"natural\":\""+reponseParsed\"}");
+  response.send("{\"unix\":dateInUnixtime,\"natural\":\""+reponseParsed+"\"}");
   //response.end('Its Over!'); 
 });
 
