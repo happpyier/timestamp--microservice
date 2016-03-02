@@ -27,7 +27,7 @@ app.get('/:tagId', function(request, response) {
 	  {
 		response.send("Please enter a date in the form of Unix Time(1451606400) or Natural Time(January 1, 2016)")
 	  }
-  //}
+  }
 });
 
 app.get('/', function(request, response) {
