@@ -8,7 +8,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  var reponseParsed = JSON.stringify(request.complete);
+  var reponseParsed = JSON.stringify(request.query);
   var reponseUnparsed = Object.keys(request); 
   var reponseUnparsed111 = 'id: ' + request.query.id; 
   var hiiiKitty = request;
